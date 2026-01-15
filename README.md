@@ -123,14 +123,19 @@ HUGGINGFACEHUB_API_TOKEN=your_huggingface_token
 
 ## Running the Project
 
-### Step 1: Ingest Knowledge Documents
+### Step 1: Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Step 2: Ingest Knowledge Documents
 Add medical reference `.txt` files to the `docs/` folder.
 
 ```bash
 python ingestion_pipeline.py
 ```
 
-### Step 2: Analyze Blood Report
+### Step 3: Analyze Blood Report
 Ensure `report.pdf` is present.
 
 ```bash
