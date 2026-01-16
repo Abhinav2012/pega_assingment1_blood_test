@@ -1,6 +1,9 @@
 import streamlit as st
 import os
 from logic import extract_pdf_data, analyze_report_with_llm, setup_vectorstore, generate_medical_analysis
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 st.set_page_config(page_title="Report Analyzer", layout="wide")
 

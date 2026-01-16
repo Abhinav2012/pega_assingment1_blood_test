@@ -6,7 +6,7 @@ from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 def extract_pdf_data(uploaded_file):
     all_tables = []

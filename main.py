@@ -7,7 +7,7 @@ from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(override=True)
 
 def extract_pdf_data(file_path='report.pdf'):
     all_tables = []
@@ -137,7 +137,7 @@ def save_to_markdown(content):
 
 if __name__ == "__main__":
     # Execute workflow
-    tables, text = extract_pdf_data('report.pdf')
+    tables, text = extract_pdf_data('abhi.pdf')
     api_key = get_api_key()
     analysis_output = analyze_report_with_llm(text, api_key)
     v_store = setup_vectorstore()

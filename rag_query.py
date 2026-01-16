@@ -1,8 +1,12 @@
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_chroma import Chroma
 import os
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 token = os.getenv('HUGGINGFACEHUB_API_TOKEN')
+print("Hugging Face Token:", token)
 embeddings = HuggingFaceEndpointEmbeddings(
     huggingfacehub_api_token=token,
     model="sentence-transformers/all-MiniLM-L6-v2"

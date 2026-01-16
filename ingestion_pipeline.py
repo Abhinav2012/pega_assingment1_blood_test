@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import TextLoader, DirectoryLoader
 
-load_dotenv()
+load_dotenv(override=True)
 
 
 docs_path="docs"
