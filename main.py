@@ -137,7 +137,7 @@ def save_to_markdown(content):
 
 if __name__ == "__main__":
     # Execute workflow
-    tables, text = extract_pdf_data('abhi.pdf')
+    tables, text = extract_pdf_data('report.pdf')
     api_key = get_api_key()
     analysis_output = analyze_report_with_llm(text, api_key)
     v_store = setup_vectorstore()
